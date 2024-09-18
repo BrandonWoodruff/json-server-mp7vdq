@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Student Logs</title>
+    <link
+      rel="icon"
+      href="https://cdn.sstatic.net/Sites/stackoverflow/Img/favicon.ico"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  </head>
+  <body>
+    <header>
+      <img src="UVULogo.png" alt="UVU Logo" id="uvu-logo" />
+    </header>
+    <form>
+      <label for="mode">Choose Mode:</label>
+      <select id="mode">
+        <option value="light">Light</option>
+        <option value="dark">Dark</option></select
+      ><br />
+
+      <select
+        aria-label="Select Course"
+        id="course"
+        name="course"
+        data-cy="course_select"
+      >
+        <option selected value="">Choose Courses</option>
+        <option value="cs4690">CS 4690</option>
+        <option value="cs4660">CS 4660</option>
+        <option value="cs3380">CS 3380</option></select
+      ><br />
+
+      <label for="uvuId" style="display: none">UVU ID</label><br />
+      <input
+        type="text"
+        id="uvuId"
+        name="uvuId"
+        data-cy="uvuId_input"
+        maxlength="8"
+        placeholder="10234567"
+        style="display: none"
+      />
+
+      <h3 id="uvuIdDisplay" data-cy="uvuIdDisplay" style="display: none">
+        Student Logs for <span id="uvuIdText"></span>
+      </h3>
+      <ul data-cy="logs">
+        <!-- Logs will be dynamically inserted here by JavaScript -->
+      </ul>
+
+      <label style="display: none">New Log</label><br />
+      <textarea
+        style="height: 75px; display: none"
+        aria-label="add log textarea"
+        data-cy="log_textarea"
+      ></textarea
+      ><br />
+
+      <button
+        type="submit"
+        data-cy="add_log_btn"
+        disabled
+        style="display: none"
+      >
+        Add Log
+      </button>
+    </form>
+    <script src="script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,155 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Header Styling */
+header {
+  text-align: center;
+  margin-bottom: 20px;
+  justify-content: center;
+}
+#uvu-logo {
+  max-width: 100px; /* Shrink the image to 100px width */
+  height: auto; /* Maintain aspect ratio */
+  margin: 0 auto; /* Center the image horizontally */
+  display: block; /* Ensure the image is centered as a block element */
+}
+
+/* Body Styling */
+body.light-mode {
+  background-color: rgb(142, 140, 137); /* UVU Grey */
+  color: rgb(35, 31, 32); /* UVU Black */
+}
+
+body.dark-mode {
+  background-color: rgb(35, 31, 32); /* UVU Black */
+  color: rgb(142, 140, 137); /* UVU Grey */
+}
+
+/* Form Styling */
+form {
+  background: #275d38;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+body.dark-mode form {
+  background: #275d38; /* UVU Black */
+  color: rgb(142, 140, 137); /* UVU Grey */
+}
+
+label[for='mode'] {
+  color: #ffffff;
+}
+
+body.dark-mode label[for='mode'] {
+  color: rgb(142, 140, 137);
+}
+
+label[for='uvuId'] {
+  color: #ffffff;
+}
+
+body.dark-mode label[for='uvuId'] {
+  color: rgb(142, 140, 137);
+}
+
+/* Input Styling */
+input[type='text'],
+textarea,
+select {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid rgb(142, 140, 137); /* UVU Grey */
+  border-radius: 4px;
+  font-size: 16px;
+  background-color: #fff;
+}
+
+body.dark-mode input[type='text'],
+body.dark-mode textarea,
+body.dark-mode select {
+  background: rgb(35, 31, 32); /* UVU Black */
+  color: rgb(142, 140, 137); /* UVU Grey */
+  border: 1px solid rgb(142, 140, 137); /* UVU Grey */
+}
+
+/* Button Styling */
+button {
+  background-color: rgb(36, 93, 56); /* UVU Green */
+  color: #fff;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+button:disabled {
+  background-color: rgb(142, 140, 137); /* UVU Grey */
+  cursor: not-allowed;
+}
+
+/* Dark Mode Button Styling */
+body.dark-mode button {
+  background-color: rgb(14, 131, 69); /* UVU Secondary Green */
+}
+
+button:disabled {
+  background-color: rgb(142, 140, 137); /* UVU Grey */
+}
+
+/* Log List Styling */
+ul {
+  list-style-type: none;
+}
+
+ul li {
+  background: rgb(142, 140, 137); /* UVU Grey */
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 4px;
+}
+
+body.dark-mode ul li {
+  background: rgb(35, 31, 32); /* UVU Black */
+  color: rgb(142, 140, 137); /* UVU Grey */
+}
+
+ul li div small {
+  color: rgb(35, 31, 32); /* UVU Black */
+}
+
+body.dark-mode ul li div small {
+  color: rgb(142, 140, 137); /* UVU Grey */
+}
+
+ul li pre {
+  background: #fff;
+  padding: 10px;
+  border-radius: 4px;
+  border: 1px solid rgb(142, 140, 137); /* UVU Grey */
+  margin-top: 5px;
+}
+
+body.dark-mode ul li pre {
+  background: rgb(35, 31, 32); /* UVU Black */
+  border: 1px solid rgb(142, 140, 137); /* UVU Grey */
+  color: rgb(142, 140, 137); /* UVU Grey */
+}
+
+/* Toggle visibility of log content */
+ul li p {
+  margin: 0;
+  display: none;
+}
+
+ul li.active p {
+  display: block;
+}
